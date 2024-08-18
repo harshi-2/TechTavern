@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Razer Huntsman V3 Pro Line</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #0a0a0a;
+            color: #fff;
+        }
+
+        .navbar {
+            background-color: #111;
+            padding: 10px 0;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            gap: 20px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links li a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .nav-extras {
+            display: flex;
+            gap: 15px;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 50px 20px;
+            position: relative;
+            height: 500px;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin-bottom: 20px;
+        }
+
+        /* Background images */
+        .hero:nth-of-type(1) {
+            background-image: url('https://assets2.razerzone.com/images/pnx.assets/3a6dc2c039b79f5aca6990ae15221b35/the-razer-huntsman-v3-pro-line-hero-desktop.webp');
+        }
+
+        .hero:nth-of-type(2) {
+            background-image: url('https://assets2.razerzone.com/images/pnx.assets/9aaa4c7d3671f1b1a5f916f45569205c/razer-pompompurin-customs-homepage-desktop2x.webp');
+        }
+
+        .hero:nth-of-type(3) {
+            background-image: url('https://assets2.razerzone.com/images/pnx.assets/9aaa4c7d3671f1b1a5f916f45569205c/razer-and-hello-kitty-and-friends-collab-homepage-desktop2x.webp');
+        }
+
+        .hero:nth-of-type(4) {
+            background-image: url('https://assets2.razerzone.com/images/pnx.assets/28f82961cbd74143180218b506df313a/left-handed-naga-campaign-b-950x580-desktop.webp');
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 3;
+        }
+
+        .hero-content h1 {
+            font-size: 2em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .hero-content p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .cta-button {
+            padding: 10px 20px;
+            background-color: #1eff00;
+            color: #000;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .ctb-button {
+            padding: 10px 20px;
+            background-color: orange;
+            color: #000;
+            text-decoration: none;
+            border-radius: 5px;
+            border: 2px solid black;
+            font-weight: bold;
+        }
+
+        .link-container {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .link-container a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .link-container a:hover {
+            text-decoration: underline;
+        }
+
+        .side-by-side-container {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            gap: 20px; /* Add gap to space out the sections */
+        }
+
+        .side-by-side-container .hero {
+            width: 48%;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .side-by-side-container .hero:nth-of-type(1) {
+            background-image: url('https://assets2.razerzone.com/images/pnx.assets/28f82961cbd74143180218b506df313a/left-handed-naga-campaign-b-950x580-desktop.webp');
+        }
+
+        .side-by-side-container .hero:nth-of-type(2) {
+            background-image: url('https://assets2.razerzone.com/images/pnx.assets/e9d1f25b84209661bb678afc1a1580f8/razer-blade-18-2024-b-950x580-desktop.webp');
+        }
+
+        .side-by-side-containerB {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            gap: 20px; /* Adjusted gap to match the first container */
+        }
+
+        .side-by-side-containerB .hero {
+            width: 48%;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .side-by-side-containerB .hero:nth-of-type(1) {
+            background-image: url('https://assets2.razerzone.com/images/pnx.assets/28f82961cbd74143180218b506df313a/razer-xanthus-b-950x580-desktop.webp');
+        }
+
+        .side-by-side-containerB .hero:nth-of-type(2) {
+            background-image: url('https://assets2.razerzone.com/images/pnx.assets/28f82961cbd74143180218b506df313a/chair-q3-campaign-b-950x580-desktop.webp');
+        }
+
+
+
+
+        .side-by-side-containerC {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            gap: 20px; /* Adjusted gap to match the first container */
+        }
+
+        .side-by-side-containerC .hero {
+            width: 48%;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .side-by-side-containerC .hero:nth-of-type(1) {
+            background-image: url('https://assets2.razerzone.com/images/pnx.assets/dafd040919ca96700d0486394bc50dcb/razer-back-to-school-2024-b-950x580-desktop.webp');
+        }
+
+        .side-by-side-containerC .hero:nth-of-type(2) {
+            background-image: url('https://assets2.razerzone.com/images/pnx.assets/2ef5b37da7be946a487d825118880d3c/esports-campaign-2024-b-950x580-desktop.webp');
+        }
+
+
+        .footer {
+            background-color: #111;
+            padding: 30px 0;
+            color: #ddd;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .footer-column {
+            flex: 1;
+            padding: 0 10px;
+        }
+
+        .footer-column h4 {
+            margin-bottom: 15px;
+            color: #fff;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-column ul li a {
+            color: #ddd;
+            text-decoration: none;
+            font-size: 12px;
+        }
+
+        .footer-column ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .social-icons a {
+    color: #ddd;
+    text-decoration: none;
+    font-size:30px; /* Adjust the icon size */
+    margin-right: 15px; /* Adjust spacing between icons */
+}
+
+.social-icons a:hover {
+    color: #fff; /* Change icon color on hover */
+}
+
+
+        .footer-bottom {
+            margin-top: 20px;
+            text-align: center;
+            border-top: 1px solid #333;
+            padding-top: 10px;
+            font-size: 14px;
+            color: #777;
+        }
+
+        .footer-bottom a {
+            color: #777;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .footer-bottom a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="logo">Razer</div>
+
+            <nav>
+
+                <ul class="nav-links">
+                    <li><a href="https://www.razer.com/store">Store</a></li>
+                    <li><a href="https://www.razer.com/pc">PC</a></li>
+                    <li><a href="https://www.razer.com/console-gaming">Console</a></li>
+                    <li><a href="https://www.razer.com/mobile">Mobile</a></li>
+                    <li><a href="https://www.razer.com/lifestyle">Lifestyle</a></li>
+                    <li><a href="https://gold.razer.com/us/en?_gl=1*1me2mxl*_gcl_au*OTA5NDQyMDQ1LjE3MjM0NTIzMzg.*_ga*MjEzMDE5MTk0OS4xNzIzNDUyMzM3*_ga_3TRK53PM75*MTcyMzg1MDQzMy42LjEuMTcyMzg1MTUyNy40NS4wLjA.">Gold</a></li>
+                    <li><a href="https://www.razer.com/community">Community</a></li>
+                    <li><a href="https://mysupport.razer.com/">Support</a></li>
+                </ul>
+
+            </nav>
+            <div class="nav-extras">
+                <a href="https://www.razer.com/" class="search-icon">&#128269;</a>
+                <a href="#" class="cart-icon">&#128722;</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- First 3 sections stacked vertically -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Razer Huntsman V3 Pro Line</h1>
+            <p>NEW SNAP TAP MODE AVAILABLE</p>
+            <a href="https://www.razer.com/pc/gaming-keyboards/huntsman-line" class="cta-button">Learn More</a>
+        </div>
+    </section>
+
+    <section class="hero">
+        <div class="hero-content" style="color:black;">
+            <a href="https://www.razer.com/customs/browse/pompompurin/all/mouse-mats/razer-gigantus-v2~medium" class="ctb-button">ONLY AT RAZER</a><br><br>
+            <h1>RAZER | POMPOMPURIN</h1>
+            <p>NOW AVAILABLE ON RAZER CUSTOMS</p>
+            <div class="link-container">
+            <a href="https://www.razer.com/customs/browse/pompompurin/all/mouse-mats/razer-gigantus-v2~medium" style="color: black;">Shop Now > </a>
+        </div>
+        </div>
+    </section>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>RAZER | HELLO KITTY AND FRIENDS</h1>
+            <p>IT'S MORE FUN WITH FRIENDS</p>
+            <div class="link-container">
+                <a href="https://www.razer.com/collabs/hello-kitty-and-friends">Learn More ></a>
+                <a href="https://www.razer.com/store">Buy ></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Last 2 sections side by side -->
+    <div class="side-by-side-container">
+        <section class="hero">
+            <div class="hero-content">
+                <h1>HAPPY LEFT HANDERS DAY</h1>
+                <p>NO GAMER LEFT BEHIND</p>
+                <div class="link-container">
+                <a href="https://www.razer.com/campaigns/left-handed-naga" style="color: white;">Learn More > </a>
+            </div>
+            </div>
+        </section>
+    
+        <section class="hero">
+            <div class="hero-content" style="color:white;">
+                <h1>NEW RAZER BLADE 18</h1>
+                <p>NEW 4K 200 HZ MODEL AVAILABLE </p>
+                <div class="link-container">
+                    <a href="https://www.razer.com/gaming-laptops/razer-blade-18" style="color:white;">Learn More > </a>
+                    <a href="https://www.razer.com/gaming-laptops/razer-blade-18/RZ09-05092EP9-R3U1" style="color:white;">Buy > </a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="side-by-side-containerB">
+        <section class="hero">
+            <div class="hero-content">
+                <h1>RAZER XANTHUS COLLECTION</h1>
+                <p>LAST-CHANCE SPECIALS</p>
+                <div class="link-container">
+                <a href="https://www.razer.com/campaigns/xanthus-last-chance" style="color: white;">Shop Now > </a>
+            </div>
+            </div>
+        </section>
+
+        <section class="hero">
+            <div class="hero-content">
+                <h1>RAZER GAMING CHAIRS</h1>
+                <p>A SEAT FOR EVERY STYLE</p>
+                <div class="link-container">
+                <a href="https://www.razer.com/lifestyle/gaming-chairs" style="color: white;">Learn More > </a>
+                <a href="https://www.razer.com/store/gaming-chairs" style="color: white;">Buy > </a>
+            </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="side-by-side-containerC">
+        <section class="hero">
+            <div class="hero-content">
+                <h1>CONQUER YOUR CAMPUS</h1>
+                <p>NEW BACK-TO-SCHOOL SPECIAL</p>
+                <div class="link-container">
+                <a href="https://www.razer.com/education" style="color: white;">Shop Now > </a>
+            </div>
+            </div>
+        </section>
+
+        <section class="hero">
+            <div class="hero-content">
+                <h1>RAZER ESPORTS PRO LINE</h1>
+                <p>TRUSTED BY CHAMPIONS</p>
+                <div class="link-container">
+                <a href="https://www.razer.com/esports" style="color: white;">Learn More > </a>
+            </div>
+            </div>
+        </section>
+    </div>
+
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h4>Shop</h4>
+                <ul>
+                    <li><a href="https://www.razer.com/razerstores">RazerStores</a></li>
+                    <li><a href="https://www.razer.com/razercafe">RazerCafe</a></li>
+                    <li><a href="https://www.razer.com/store-finder">Store Locator</a></li>
+                    <li><a href="https://www.razer.com/store/programs">Purchase Programs</a></li>
+                    <li><a href="https://www.razer.com/store/bulk-purchase">Bulk Order Program</a></li>
+                    <li><a href="https://www.razer.com/education">Education</a></li>
+                    <li><a href="https://www.razer.com/only-at-razer">Only at Razer</a></li>
+                    <li><a href="https://www.razer.com/store/rewards">RazerStore Rewards</a></li>
+                    <li><a href="#">Newsletter</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Explore</h4>
+                <ul>
+                    <li><a href="https://www.razer.com/technology">Technology</a></li>
+                    <li><a href="https://www.razer.com/chroma">Chroma RGB</a></li>
+                    <li><a href="https://www.razer.com/concepts">Concepts</a></li>
+                    <li><a href="https://www.razer.com/esports">Esports</a></li>
+                    <li><a href="https://www.razer.com/lifestyle/collabs">Collabs</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="https://mysupport.razer.com/?c=us&_gl=1*1w7aixd*_gcl_au*OTA5NDQyMDQ1LjE3MjM0NTIzMzg.*_ga*MjEzMDE5MTk0OS4xNzIzNDUyMzM3*_ga_3TRK53PM75*MTcyMzg2NTU2Mi43LjEuMTcyMzg3MjA3MC40OC4wLjA.&_ga=2.30390010.417221405.1723804401-2130191949.1723452337">Get Help</a></li>
+                    <li><a href="https://www.razer.com/product-registration">Registration and Warranty</a></li>
+                    <li><a href="https://www.razer.com/razerstore-support">RazerStore Support</a></li>
+                    <li><a href="https://www.razer.com/razercare">RazerCare</a></li>
+                    <li><a href="https://razerid.razer.com/?_gl=1*1wr829h*_gcl_au*OTA5NDQyMDQ1LjE3MjM0NTIzMzg.*_ga*MjEzMDE5MTk0OS4xNzIzNDUyMzM3*_ga_3TRK53PM75*MTcyMzg2NTU2Mi43LjEuMTcyMzg3MjM3Ny41MS4wLjA.">Manage Razer ID</a></li>
+                    <li><a href="https://www.youtube.com/channel/UCrG4K8-XFEK5FyCz_jVzV-A/videos">Support Videos</a></li>
+                    <li><a href="https://mysupport.razer.com/app/answers/detail/a_id/5904?_gl=1*1fees6v*_gcl_au*OTA5NDQyMDQ1LjE3MjM0NTIzMzg.*_ga*MjEzMDE5MTk0OS4xNzIzNDUyMzM3*_ga_3TRK53PM75*MTcyMzg2NTU2Mi43LjEuMTcyMzg3MjU0Ni42MC4wLjA.&_ga=2.257470926.417221405.1723804401-2130191949.1723452337">Recycling Program</a></li>
+                    <li><a href="https://www.razer.com/legal/commitment-to-accessibility">Accessibility Statement</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="https://www.razer.com/about-razer">About Us</a></li>
+                    <li><a href="https://careers.razer.com/?_gl=1*18jxvg7*_gcl_au*OTA5NDQyMDQ1LjE3MjM0NTIzMzg.*_ga*MjEzMDE5MTk0OS4xNzIzNDUyMzM3*_ga_3TRK53PM75*MTcyMzg2NTU2Mi43LjEuMTcyMzg3Mjc0MC40My4wLjA.">Careers </a></li>
+                    <li><a href="https://press.razer.com/?_gl=1%2Apbesiz%2A_gcl_au%2AOTA5NDQyMDQ1LjE3MjM0NTIzMzg.%2A_ga%2AMjEzMDE5MTk0OS4xNzIzNDUyMzM3%2A_ga_3TRK53PM75%2AMTcyMzg2NTU2Mi43LjEuMTcyMzg3Mjc1Ny4yNi4wLjA.">Newsroom</a></li>
+                    <li><a href="https://www.zvntrs.com/">zVentures</a></li>
+                    <li><a href="https://www.razer.com/contact-us">Contact us</a></li>
+                </ul>
+
+            </div>
+
+            <div class="footer-column">
+                <h4>Follow Us</h4>
+                <ul>
+
+                
+                <div class="social-icons">
+                    <li><a href="https://www.facebook.com/razer" class="fab fa-facebook-f"></a></li> <!-- Facebook -->
+                    <li><a href="https://www.instagram.com/razer" class="fab fa-instagram"></a> <!-- Instagram --></li>
+                    <li><a href="https://www.threads.net/@razer" class="fab fa-linkedin-in"></a> <!-- LinkedIn --></li>
+                    <li><a href="https://x.com/Razer" class="fab fa-twitter"></a> <!-- Twitter --></li>
+                    <li><a href="https://www.youtube.com/razer" class="fab fa-youtube"></a> <!-- YouTube --></li>
+                    <li><a href="#" class="fab fa-tiktok"></a> <!-- TikTok --></li>
+                    <li><a href="#" class="fab fa-twitch"></a> <!-- Twitch --></li>
+                    <li><a href="#" class="fab fa-discord"></a> <!-- Discord --></li>
+                </ul>
+                </div>
+            </div>
+
+            
+            </footer>
+            <footer style="color: aquamarine;"><center><p>Designed by Harshith Gowda P</center></p></footer>
+            
+
+
+
+
+</body>
+</html>
